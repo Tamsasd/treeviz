@@ -12,7 +12,7 @@
 
 ## Tech Stack
 
-- **Framework** React + Vite
+- **Framework:** React + Vite
 - **Language:** TypeScript
 - **Frontend:** CSS
 
