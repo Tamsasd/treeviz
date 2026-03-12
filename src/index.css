@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --font-mono: 'Ui-Monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace;
+  --line-height: 1.6;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 600;
+
+  --primary: #3b82f6;
+  --primary-transparent: rgba(59, 130, 246, 0.15);
+  --primary-hover: #eab20875;
+  --primary-selected: #22c55e;
+  --primary-selected-transparent: rgba(34, 197, 94, 0.15);
+  --primary-red: #ef4444;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --input-height: 2.25em;
+  --border-radius: 0.375em;
+  --border-radius-lg: 0.75rem;
+
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}
+
+/* Light Theme */
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f4f6;
+  --bg-tertiary: #e5e7eb;
+
+  --color-text: #1f2937;
+  --color-text-light: #4b5563;
+  --color-text-dark: #111827;
+  --color-text-muted: #9ca3af;
+  --color-white: #ffffff;
+
+  --border-light: #e5e7eb;
+
+  --node-fill-std: #ffffff;
+  --node-text-std: #1f2937;
+  --node-fill-black: #1f2937;
+  --node-stroke: #d1d5db;
+  --edge-stroke: #cbd5e1;
+}
+
+/* Dark Theme */
+[data-theme='dark'] {
+  --bg-primary: #1a1d1a;
+  --bg-secondary: #212421;
+  --bg-tertiary: #2a2d2a;
+
+  --color-text: #e2e2e2;
+  --color-text-light: #a3a3a3;
+  --color-text-dark: #ffffff;
+  --color-text-muted: #737373;
+
+  --color-white: #252825;
+  --border-light: #333633;
+
+  --node-fill-std: #252825;
+  --node-text-std: #e2e2e2;
+  --node-fill-black: #000000;
+  --node-stroke: #404040;
+  --edge-stroke: #404040;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  overflow: hidden;
+}
+
+#root {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  width: 100%;
+  background-color: var(--bg-primary);
+  min-width: 22.5rem;
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+  font-weight: var(--font-weight-normal);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-light);
+  padding: 0;
+  color: var(--color-text);
+  height: var(--input-height);
+  width: 6em;
+  font-size: 1em;
+  font-weight: var(--font-weight-medium);
+  font-family: inherit;
+  background-color: var(--color-white);
+  line-height: inherit;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+}
+
+button:hover {
+  border-color: var(--primary);
+  background-color: var(--primary-transparent);
+}
+
+button:focus,
+button:focus-visible {
+  outline: none;
+  border-color: var(--primary);
+}
+
+button.subtle {
+  border: none;
+  background: none;
+  padding: 0;
+  width: fit-content;
+  line-height: initial;
+  fill: var(--color-text-dark);
+}
+
+button.subtle:hover svg {
+  fill: lightgray;
+}
+
+input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-light);
+  padding: 0 1em;
+  height: var(--input-height);
+  font-size: 1em;
+  font-weight: var(--font-weight-medium);
+  font-family: inherit;
+  background-color: var(--color-white);
+  line-height: inherit;
+  width: 8em;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+svg {
+  font-family: Inter;
+  text-anchor: middle;
+  font-size: 15;
+  font-weight: bold;
+  pointer-events: none;
+}

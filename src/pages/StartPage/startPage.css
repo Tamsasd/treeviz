@@ -1,0 +1,172 @@
+* {
+  box-sizing: border-box;
+}
+
+div#startPage {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.language-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-weight: bold;
+  font-family: var(--font-mono);
+  background-color: var(--bg-primary);
+  box-shadow: var(--shadow-sm);
+  z-index: 100;
+  justify-content: center;
+}
+
+.theme-toggle {
+  position: absolute;
+  top: 1rem;
+  right: 4.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--bg-primary);
+  box-shadow: var(--shadow-sm);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  color: var(--color-text);
+}
+
+div#tree_selector {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 80%;
+  justify-self: center;
+  justify-content: space-between;
+}
+
+div#tree_selector>.tree {
+  width: min-content;
+  padding: 0.5em;
+  box-shadow: var(--shadow-sm);
+  border: 0.25em solid transparent;
+  border-radius: 0.5em;
+  transition: all 0.2s;
+  background-color: var(--bg-primary);
+  color: var(--color-text);
+}
+
+div#tree_selector>.tree:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+  background-color: var(--bg-secondary);
+}
+
+div#tree_selector>.tree.selected {
+  border: 0.25em solid var(--primary-selected);
+  position: relative;
+}
+
+div#tree_selector>.tree.selected::after {
+  content: "✔";
+  color: white;
+  background-color: var(--primary-selected);
+  box-shadow: var(--shadow-sm);
+  width: 2em;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1em;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}
+
+h3.tree_name {
+  margin: 0.5em;
+}
+
+#initial_insert {
+  font-size: 1.4em;
+  margin-bottom: 2em;
+  flex: 1;
+  height: 2em;
+  background-color: var(--bg-primary);
+  color: var(--color-text);
+}
+
+#initial_insert::placeholder {
+  color: var(--color-text-muted);
+}
+
+.insert_div {
+  width: 80%;
+  display: flex;
+  justify-self: center;
+  position: relative;
+  gap: 1em;
+  margin: 0 auto;
+}
+
+
+.insert_div>button {
+  font-size: 1.4em;
+  width: fit-content;
+  padding: 0 1em;
+}
+
+.insert_div>button:hover {
+  border-color: var(--primary-selected);
+  background-color: var(--primary-selected-transparent);
+}
+
+.insert_div>button:active {
+  background-color: var(--primary-selected);
+}
+
+div#title {
+  text-align: center;
+  color: var(--color-text);
+}
+
+#title>h1 {
+  margin-bottom: 0;
+  margin-top: 1.3em;
+}
+
+#title>h5 {
+  margin-top: 0;
+  font-weight: 600;
+  color: var(--color-text-light);
+}
+
+.insert_div>input {
+  transition: border-color 0.2s;
+}
+
+.insert_div>input:valid {
+  border-color: var(--primary-selected);
+}
+
+.insert_div>input:invalid {
+  border-color: var(--primary-red);
+}
+
+.insert_div>input:placeholder-shown {
+  border-color: var(--border-light);
+}
+
+#inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
