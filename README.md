@@ -12,9 +12,9 @@
 
 ## Tech Stack
 
-- **Frontend:** React, TypeScript
-- **Tooling:** Vite
-- **Styling:** CSS
+- **Framework** React + Vite
+- **Language:** TypeScript
+- **Frontend:** CSS
 
 ## TODO
 
